@@ -4,4 +4,4 @@ module.exports = (server) => {
         .get('/', server.middlewares.bodyparser, server.actions.contacts.list);
 
     return router;
-}
+};

@@ -1,5 +1,7 @@
 module.exports = (server) => {
   return function(req,res,next){
-    res.send("YESSSS");
+    server.models.contact.findAll().then( (contacts) => {
+        res.send(contacts);
+    });
   }
 };

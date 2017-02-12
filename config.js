@@ -3,10 +3,10 @@ const ENV = process.env.ENV ? process.env.ENV : "dev";
 const IS_PROD = ENV == "prod";
 
 const MYSQL = {
-    host     : "localhost",
+    host     : "172.17.0.2",
     user     : "root",
     password : "root",
-    database : "android-security-api",
+    database : "android-security",
     port     : 3306
 };
 
