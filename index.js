@@ -1,13 +1,15 @@
 const express     =   require('express');
 const config      =   require('./config');
 const morgan      =   require('morgan');
+const busboy      =   require('connect-busboy');
 
 // Webserver parameter
-const PORT = process.env.PORT || 5555;
+const PORT = process.env.PORT || 6666;
 
 // Starting our webserver and putting it all together
 const server     =   express();
 
+server.use(busboy());
 server.use(morgan('dev'));
 
 server.config = config;

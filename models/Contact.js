@@ -4,10 +4,7 @@ module.exports = (server) => {
 
     const Contact = server.models.squelize.define('contact', {
         name: Sequelize.STRING,
-        firstname: Sequelize.STRING,
-        lastname: Sequelize.STRING,
-        mobile: Sequelize.STRING,
-        telephone: Sequelize.STRING,
+        number: Sequelize.STRING,
         email: Sequelize.STRING
     });
 
